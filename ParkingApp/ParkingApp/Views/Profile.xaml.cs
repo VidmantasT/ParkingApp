@@ -1,4 +1,5 @@
-﻿using System;
+﻿using ParkingApp.ViewModels;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -15,6 +16,8 @@ namespace ParkingApp.Views
         public Profile()
         {
             InitializeComponent();
+
+            BindingContext = new ProfileViewModel();
         }
     }
 }
