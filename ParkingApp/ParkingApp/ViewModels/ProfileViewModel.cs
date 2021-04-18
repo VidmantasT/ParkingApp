@@ -9,10 +9,10 @@ namespace ParkingApp.ViewModels
 {
     public class ProfileViewModel
     {
-        public Command GoToPage { get; }
+        public Command sendEmail { get; }
         public ProfileViewModel()
         {
-            GoToPage = new Command(async() => await SendEmail());
+            sendEmail = new Command(async() => await SendEmail());
         }
 
         public async Task SendEmail()
