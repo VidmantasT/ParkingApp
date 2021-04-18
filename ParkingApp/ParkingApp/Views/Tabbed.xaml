@@ -8,12 +8,12 @@
             BarBackgroundColor="Gray"
             BarTextColor="White">
   <!--Pages can be added as references or inline-->
-    <NavigationPage Title="Profile">
+    <NavigationPage Title="Profile" IconImageSource="profile.png">
         <x:Arguments>
             <parkingapp:Profile Title="Profile"/>
         </x:Arguments>
     </NavigationPage>
-    <NavigationPage Title="Parking">
+    <NavigationPage Title="Parking" IconImageSource="parking.png">
         <x:Arguments>
             <parkingapp:MainPage/>
         </x:Arguments>
