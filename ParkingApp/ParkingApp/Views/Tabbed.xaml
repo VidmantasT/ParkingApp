@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<TabbedPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+            xmlns:parkingapp="clr-namespace:ParkingApp.Views"
+            x:Class="ParkingApp.Tabbed"
+            xmlns:android="clr-namespace:Xamarin.Forms.PlatformConfiguration.AndroidSpecific;assembly=Xamarin.Forms.Core"
+            android:TabbedPage.ToolbarPlacement="Bottom">
+  <!--Pages can be added as references or inline-->
+    <NavigationPage Title="Profile">
+        <x:Arguments>
+            <parkingapp:Profile Title="Profile"/>
+        </x:Arguments>
+    </NavigationPage>
+    <NavigationPage Title="Parking">
+        <x:Arguments>
+            <parkingapp:MainPage/>
+        </x:Arguments>
+    </NavigationPage>
+</TabbedPage>

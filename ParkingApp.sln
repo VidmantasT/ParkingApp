@@ -1,0 +1,35 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31112.23
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ParkingApp.Android", "ParkingApp\ParkingApp.Android\ParkingApp.Android.csproj", "{CA112E18-BD0C-4F97-B14B-049075F8D286}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ParkingApp", "ParkingApp\ParkingApp\ParkingApp.csproj", "{602CF465-63BD-4E8B-8041-16E52712AEE2}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{CA112E18-BD0C-4F97-B14B-049075F8D286}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CA112E18-BD0C-4F97-B14B-049075F8D286}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CA112E18-BD0C-4F97-B14B-049075F8D286}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{CA112E18-BD0C-4F97-B14B-049075F8D286}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CA112E18-BD0C-4F97-B14B-049075F8D286}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CA112E18-BD0C-4F97-B14B-049075F8D286}.Release|Any CPU.Deploy.0 = Release|Any CPU
+		{602CF465-63BD-4E8B-8041-16E52712AEE2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{602CF465-63BD-4E8B-8041-16E52712AEE2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{602CF465-63BD-4E8B-8041-16E52712AEE2}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{602CF465-63BD-4E8B-8041-16E52712AEE2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{602CF465-63BD-4E8B-8041-16E52712AEE2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{602CF465-63BD-4E8B-8041-16E52712AEE2}.Release|Any CPU.Deploy.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {EDF16EE2-C977-4EF2-B59C-C13AD6D0C774}
+	EndGlobalSection
+EndGlobal

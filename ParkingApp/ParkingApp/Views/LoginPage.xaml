@@ -1,0 +1,37 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="ParkingApp.Views.LoginPage"
+             Shell.NavBarIsVisible="False">
+    <ContentPage.Content>
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="2*"/>
+                <RowDefinition Height="auto"/>
+                <RowDefinition Height="auto"/>
+                <RowDefinition Height="1*"/>
+            </Grid.RowDefinitions>
+
+            <Grid Grid.Row="0" Padding="10">
+                <Image Grid.Row="0" VerticalOptions="Center" HorizontalOptions="Center" 
+                   Source="/Resources/appLogo.png"></Image>
+            </Grid>
+            <Grid Grid.Row="1" Padding="10">
+                <Button Text="Login" CornerRadius="20" Clicked="Button_Clicked"></Button>
+            </Grid>
+            <Grid Grid.Row="2" Padding="10">
+                <Button BackgroundColor="White" TextColor="DodgerBlue" Text="Sign Up" 
+                        CornerRadius="20" BorderColor="DodgerBlue" BorderWidth="1" Clicked="Button_Clicked_1">
+                </Button>
+            </Grid>
+            <Grid Grid.Row="3" Padding="10">
+                <Image Grid.Row="0" VerticalOptions="Center" HorizontalOptions="Center" 
+                   Source="/Resources/appTitle.png"></Image>
+            </Grid>
+                
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>

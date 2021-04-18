@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ParkingApp.Views.MainPage"
+             ControlTemplate="{StaticResource MyTemplate}"
+             NavigationPage.HasBackButton="False"
+             NavigationPage.HasNavigationBar="False"
+             >
+    <ContentPage.Content>
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="auto"/>
+                <RowDefinition Height="auto"/>
+            </Grid.RowDefinitions>
+
+            <Label Grid.Row="0" Text="Select City" 
+                   BackgroundColor="#e8e8e8" HorizontalTextAlignment="Center" 
+                   HeightRequest="50" VerticalTextAlignment="Center"
+                   FontSize="30"/>
+
+            <ListView x:Name="CitiesListview" Grid.Row="1" 
+                      ItemsSource="{Binding AllCities}" SeparatorColor="Black"
+                      ItemTapped="CitiesListview_ItemTapped">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <TextCell TextColor="Black" Text="{Binding city}" />
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>

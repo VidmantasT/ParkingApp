@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ParkingApp.Views.SpacesPage"
+             ControlTemplate="{StaticResource MyTemplate}"
+             NavigationPage.HasBackButton="False"
+             NavigationPage.HasNavigationBar="False"
+             >
+    <ContentPage.Content>
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="auto"/>
+                <RowDefinition Height="1*"/>
+                <RowDefinition Height="auto"/>
+                <RowDefinition Height="auto"/>
+            </Grid.RowDefinitions>
+
+            <Label Grid.Row="0" Text="Reserve parking spot" 
+                   BackgroundColor="#e8e8e8" HorizontalTextAlignment="Center" 
+                   HeightRequest="50" VerticalTextAlignment="Center"
+                   FontSize="30"/>
+
+            <Label Grid.Row="1" Text="{Binding emptySpaces}" FontSize="150" TextColor="Black" Margin="10"
+                   HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand"/>
+            <Label Grid.Row="2" Text="Free Spaces Left" TextColor="Black" FontSize="35" VerticalOptions="CenterAndExpand"
+                   HorizontalOptions="CenterAndExpand"/>
+            <Button Grid.Row="3" Margin="10" Text="RESERVE" Command="{Binding MyCommand}" FontSize="20"/>
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>
