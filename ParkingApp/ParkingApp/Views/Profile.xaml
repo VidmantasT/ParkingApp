@@ -15,19 +15,30 @@
                     <RowDefinition Height="auto"/>
                     <RowDefinition Height="auto"/>
                     <RowDefinition Height="auto"/>
+                    <RowDefinition Height="auto"/>
+                    <RowDefinition Height="auto"/>
+                    <RowDefinition Height="auto"/>
+                    <RowDefinition Height="auto"/>
+                    <RowDefinition Height="auto"/>
                 </Grid.RowDefinitions>
 
                 <Label Grid.Row="0" Text="Profile" 
                    BackgroundColor="#e8e8e8" HorizontalTextAlignment="Center" 
                    HeightRequest="50" VerticalTextAlignment="Center"
                    FontSize="30"/>
+                <Label Grid.Row="1" Text="Add Car" Margin="10" FontSize="25" TextColor="Black"/>
+                <Switch Grid.Row="1" HorizontalOptions="Center" VerticalOptions="Center" Margin="0,0,125,0" IsToggled="{Binding}"/>
 
-                <Entry Grid.Row="1" Margin="10" Placeholder="Car Brand"></Entry>
-                <Entry Grid.Row="2" Margin="10" Placeholder="Licence Plate Number"></Entry>
+                <Entry Grid.Row="2" Margin="10" Placeholder="Car Brand" IsEnabled="{Binding}"></Entry>
+                <Entry Grid.Row="3" Margin="10" Placeholder="Licence Plate Number" IsEnabled="{Binding}"></Entry>
 
-                <Button Grid.Row="3" Margin="10" Text="Save Car" CornerRadius="20"/>
-                
-                <Button Grid.Row="4" Margin="10" Text="Email Us" CornerRadius="20" Command="{Binding sendEmail}"/>
+                <Label Grid.Row="4" Text="CAR BRAND" Margin="10" FontSize="25" TextColor="Black"/>
+                <Label Grid.Row="5" Text="bindinti" Margin="10" FontSize="25" TextColor="Black"/>
+                <Label Grid.Row="6" Text="LICENCE PLATE" Margin="10" FontSize="25" TextColor="Black"/>
+                <Label Grid.Row="7" Text="bindinti" Margin="10" FontSize="25" TextColor="Black"/>
+
+                <Button Grid.Row="8" Margin="10" Text="Save Car" CornerRadius="20"/>
+                <Button Grid.Row="9" Margin="10" Text="Email Us" CornerRadius="20" Command="{Binding sendEmail}"/>
             </Grid>
         </ScrollView>
     </ContentPage.Content>

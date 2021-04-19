@@ -9,6 +9,7 @@ namespace ParkingApp.ViewModels
 {
     public class ProfileViewModel
     {
+        public bool isEnabled { get; set; }
         public Command sendEmail { get; }
         public ProfileViewModel()
         {
