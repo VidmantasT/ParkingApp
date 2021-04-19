@@ -18,6 +18,11 @@ namespace ParkingApp.ViewModels
             set 
             {
                 isRunning = value;
+
+                OnPropertyChanged();
+
+                sendEmail.ChangeCanExecute();
+                saveCar.ChangeCanExecute();
             }
         }
 
@@ -86,8 +91,8 @@ namespace ParkingApp.ViewModels
 
         public ProfileViewModel()
         {
-            sendEmail = new Command(async() => await SendEmail());
-            saveCar = new Command(async () => await SaveCar(this.brand, this.licencePlate));
+            sendEmail = new Command(async() => await SendEmail(), () => !IsRunning);
+            saveCar = new Command(async () => await SaveCar(this.brand, this.licencePlate), () => !IsRunning);
         }
 
         public async Task SaveCar(string brand, string licencePlate)
