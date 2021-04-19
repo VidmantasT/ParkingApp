@@ -11,6 +11,16 @@ namespace ParkingApp.ViewModels
 {
     public class ProfileViewModel : INotifyPropertyChanged
     {
+        public bool isRunning = false;
+        public bool IsRunning
+        {
+            get { return isRunning; }
+            set 
+            {
+                isRunning = value;
+            }
+        }
+
         public bool isToggled = false;
         public bool IsToggled
         {
@@ -89,8 +99,19 @@ namespace ParkingApp.ViewModels
                 Brand = brand;
                 LicencePlate = licencePlate;
 
+                IsRunning = true;
+                OnPropertyChanged(nameof(IsRunning));
+
+                await Task.Delay(4000);
+
+                IsRunning = false;
+                OnPropertyChanged(nameof(IsRunning));
+
                 OnPropertyChanged(nameof(DisplayBrand));
                 OnPropertyChanged(nameof(DisplayLicencePlate));
+
+                IsToggled = false;
+                OnPropertyChanged(nameof(IsToggled));
             }
         }
 
