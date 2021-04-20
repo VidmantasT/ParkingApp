@@ -45,6 +45,8 @@ namespace ParkingApp.ViewModels
             set 
             { 
                 brand = value;
+
+                OnPropertyChanged();
             }
         }
 
@@ -55,6 +57,8 @@ namespace ParkingApp.ViewModels
             set 
             { 
                 licencePlate = value;
+
+                OnPropertyChanged();
             }
         }
 
@@ -98,14 +102,14 @@ namespace ParkingApp.ViewModels
             logout = new Command(async () => await Logout(), () => !IsRunning);
         }
 
-        public async Task SaveCar(string brand, string licencePlate)
+        public async Task SaveCar(string _brand, string _licencePlate)
         {
-            if (this.brand == "" || this.licencePlate == "")
+            if (_brand == "" || _licencePlate == "")
                 await Application.Current.MainPage.DisplayAlert("Alert!", "Enter empty fields!", "OK");
             else
             {
-                Brand = brand;
-                LicencePlate = licencePlate;
+                Brand = _brand;
+                LicencePlate = _licencePlate;
 
                 IsRunning = true;
                 OnPropertyChanged(nameof(IsRunning));
@@ -120,6 +124,9 @@ namespace ParkingApp.ViewModels
 
                 IsToggled = false;
                 OnPropertyChanged(nameof(IsToggled));
+
+                Brand = "";
+                LicencePlate = "";
             }
         }
 
