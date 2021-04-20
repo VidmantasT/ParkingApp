@@ -45,7 +45,6 @@
                 <Button Grid.Row="8" Margin="10" Text="Save Car" CornerRadius="20" Command="{Binding saveCar}"/>
                 <Button Grid.Row="9" Margin="10" BackgroundColor="SlateGray" Text="Email Us" CornerRadius="20" Command="{Binding sendEmail}"/>
                 <Button Grid.Row="10" Margin="10" BackgroundColor="Red" Text="Logout" CornerRadius="20" Command="{Binding logout}"/>
-
             </Grid>
         </ScrollView>
     </ContentPage.Content>

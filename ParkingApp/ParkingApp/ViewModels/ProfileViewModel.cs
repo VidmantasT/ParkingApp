@@ -95,7 +95,7 @@ namespace ParkingApp.ViewModels
         {
             sendEmail = new Command(async() => await SendEmail(), () => !IsRunning);
             saveCar = new Command(async () => await SaveCar(this.brand, this.licencePlate), () => !IsRunning);
-            logout = new Command(async () => await Logout());
+            logout = new Command(async () => await Logout(), () => !IsRunning);
         }
 
         public async Task SaveCar(string brand, string licencePlate)
