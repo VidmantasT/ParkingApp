@@ -23,6 +23,7 @@ namespace ParkingApp.ViewModels
 
                 sendEmail.ChangeCanExecute();
                 saveCar.ChangeCanExecute();
+                logout.ChangeCanExecute();
             }
         }
 
@@ -76,7 +77,7 @@ namespace ParkingApp.ViewModels
 
         public string DisplayLicencePlate
         {
-            get { return licencePlate; }
+            get { return licencePlate.ToUpper(); }
         }
 
         public event PropertyChangedEventHandler PropertyChanged;
@@ -88,11 +89,13 @@ namespace ParkingApp.ViewModels
 
         public Command sendEmail { get; }
         public Command saveCar { get; }
+        public Command logout { get; }
 
         public ProfileViewModel()
         {
             sendEmail = new Command(async() => await SendEmail(), () => !IsRunning);
             saveCar = new Command(async () => await SaveCar(this.brand, this.licencePlate), () => !IsRunning);
+            logout = new Command(async () => await Logout());
         }
 
         public async Task SaveCar(string brand, string licencePlate)
@@ -130,6 +133,11 @@ namespace ParkingApp.ViewModels
             {
                 await Application.Current.MainPage.DisplayAlert("Alert", $"{ex}", "OK");
             }
+        }
+
+        public async Task Logout()
+        {
+            await Application.Current.MainPage.Navigation.PopToRootAsync();
         }
     }
 }
