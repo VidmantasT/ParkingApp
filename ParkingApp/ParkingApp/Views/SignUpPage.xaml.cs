@@ -1,4 +1,5 @@
-﻿using System;
+﻿using ParkingApp.ViewModels;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -15,20 +16,7 @@ namespace ParkingApp.Views
         public SignUpPage()
         {
             InitializeComponent();
-        }
-
-        private async void SignUp_Clicked(object sender, EventArgs e)
-        {
-            if (username.Text == null || password.Text == null)
-                await DisplayAlert("Alert", "Enter empty fields", "OK");
-            else
-            {
-                User user = new User(username.Text, password.Text);
-                UsersDb.Users.Add(user);
-
-                await DisplayAlert("Success", $"User {username.Text} created!", "OK");
-                await Navigation.PopToRootAsync();
-            }
+            BindingContext = new SignUpPageViewModel();
         }
     }
 }
