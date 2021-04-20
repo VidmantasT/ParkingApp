@@ -59,7 +59,7 @@ namespace ParkingApp.ViewModels
         public async Task SignUp(string _username, string _password)
         {
             if(_username == "" || _password == "")
-                await Application.Current.MainPage.DisplayAlert("Alert", "Enter empty fields!", "OK");
+                await Application.Current.MainPage.DisplayAlert("Alert!", "Enter empty fields!", "OK");
             else
             {
                 UsersDb.Users.Add(new User(_username, _password));
@@ -72,7 +72,7 @@ namespace ParkingApp.ViewModels
                 IsRunning = false;
                 OnPropertyChanged(nameof(IsRunning));
 
-                await Application.Current.MainPage.DisplayAlert("Success", $"User {_username} created!", "OK");
+                await Application.Current.MainPage.DisplayAlert("Success!", $"User {_username} created!", "OK");
 
                 await Application.Current.MainPage.Navigation.PopToRootAsync();
             }

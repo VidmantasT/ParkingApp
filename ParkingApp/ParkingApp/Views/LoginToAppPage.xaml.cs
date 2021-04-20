@@ -19,27 +19,27 @@ namespace ParkingApp.Views
             BindingContext = new LoginToAppPageViewModel();
         }
 
-        private async void Login_Clicked(object sender, EventArgs e)
-        {
-            bool loggedIn = false;
+        //private async void Login_Clicked(object sender, EventArgs e)
+        //{
+        //    bool loggedIn = false;
 
-            if (usernameText.Text == null || PasswordText == null)
-                await DisplayAlert("Alert", "Enter empty fields", "OK");
-            else
-            {
-                foreach (var item in UsersDb.Users)
-                {
-                    if(item.GetUsername() == usernameText.Text && item.GetPassword() == PasswordText.Text)
-                    {
-                        loggedIn = true;
-                        await DisplayAlert("Success", $"Hi, {usernameText.Text}!", "OK");
-                        await Navigation.PushModalAsync(new Tabbed(), true);
-                    }
-                }
+        //    if (usernameText.Text == null || PasswordText == null)
+        //        await DisplayAlert("Alert", "Enter empty fields", "OK");
+        //    else
+        //    {
+        //        foreach (var item in UsersDb.Users)
+        //        {
+        //            if(item.GetUsername() == usernameText.Text && item.GetPassword() == PasswordText.Text)
+        //            {
+        //                loggedIn = true;
+        //                await DisplayAlert("Success", $"Hi, {usernameText.Text}!", "OK");
+        //                await Navigation.PushModalAsync(new Tabbed(), true);
+        //            }
+        //        }
 
-                if(!loggedIn)
-                    await DisplayAlert("Alert", "Invalid Credentials", "OK");
-            }
-        }
+        //        if(!loggedIn)
+        //            await DisplayAlert("Alert", "Invalid Credentials", "OK");
+        //    }
+        //}
     }
 }
