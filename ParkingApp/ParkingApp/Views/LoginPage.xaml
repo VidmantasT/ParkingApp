@@ -20,11 +20,11 @@
                    Source="/Resources/appLogo.png"></Image>
             </Grid>
             <Grid Grid.Row="1" Padding="10">
-                <Button Text="Login" CornerRadius="20" Clicked="Button_Clicked"></Button>
+                <Button Text="Login" CornerRadius="20" Command="{Binding login}"></Button>
             </Grid>
             <Grid Grid.Row="2" Padding="10">
                 <Button BackgroundColor="White" TextColor="DodgerBlue" Text="Sign Up" 
-                        CornerRadius="20" BorderColor="DodgerBlue" BorderWidth="1" Clicked="Button_Clicked_1">
+                        CornerRadius="20" BorderColor="DodgerBlue" BorderWidth="1" Command="{Binding signUp}">
                 </Button>
             </Grid>
             <Grid Grid.Row="3" Padding="10">
