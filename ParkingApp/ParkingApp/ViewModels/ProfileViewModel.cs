@@ -101,7 +101,7 @@ namespace ParkingApp.ViewModels
         public async Task SaveCar(string brand, string licencePlate)
         {
             if (this.brand == "" || this.licencePlate == "")
-                await Application.Current.MainPage.DisplayAlert("Alert", "Enter empty fields!", "OK");
+                await Application.Current.MainPage.DisplayAlert("Alert!", "Enter empty fields!", "OK");
             else
             {
                 Brand = brand;
@@ -131,7 +131,7 @@ namespace ParkingApp.ViewModels
             }
             catch (Exception ex)
             {
-                await Application.Current.MainPage.DisplayAlert("Alert", $"{ex}", "OK");
+                await Application.Current.MainPage.DisplayAlert("Alert!", $"{ex}", "OK");
             }
         }
 
